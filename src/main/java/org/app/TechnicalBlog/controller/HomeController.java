@@ -17,9 +17,9 @@ public class HomeController {
         ArrayList<Post> posts = new ArrayList<>();
 
         Post post1 = new Post();
-        post.setTitle("Post 1");
-        post.setBody("Post Body 1");
-        post.setDate(new Date());
+        post1.setTitle("Post 1");
+        post1.setBody("Post Body 1");
+        post1.setDate(new Date());
 
         Post post2 = new Post();
         post2.setTitle("Post 2");
@@ -36,7 +36,7 @@ public class HomeController {
         posts.add(post3);
 
 
-        modle.addAtribute("posts" , posts);
+        model.addAttribute("posts" , posts);
         return "index";
 
     }
