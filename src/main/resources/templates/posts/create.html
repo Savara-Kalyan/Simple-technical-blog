@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Technical Bolg Application - Create Post</title>
+</head>
+<header th:replace="layout :: logged-in"></header>
+<body>
+    <h1>Create your post</h1>
+    <form method="post" th:action="@{/posts/createPost}">
+        <div>Title : </div>
+        <div>
+            <input type="text" id="title" name="title"/>
+        </div>
+        <div>Description : </div>
+        <div>
+            <textarea rows="7" cols="100" id="body" name="body"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

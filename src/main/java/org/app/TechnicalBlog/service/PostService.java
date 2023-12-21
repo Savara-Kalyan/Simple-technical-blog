@@ -2,6 +2,7 @@ package org.app.TechnicalBlog.service;
 
 import org.app.TechnicalBlog.model.Post;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,5 +34,21 @@ public class PostService {
 
 
         return posts;
+    }
+
+    public ArrayList<Post> get1Post() {
+        ArrayList<Post> posts = new ArrayList<>();
+
+        Post post = new Post();
+        post.setTitle("New post for User");
+        post.setBody("New post for User");
+        post.setDate(new Date());
+        posts.add(post);
+
+        return posts;
+    }
+
+    public void createPost(Post post){
+
     }
 }
